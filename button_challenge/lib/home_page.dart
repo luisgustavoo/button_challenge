@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:button_challenge/widgets/button_app.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -6,10 +9,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(''),
+      body: Center(
+        child: ButtonApp(
+          onTap: () => log('Click'),
+        ),
       ),
-      body: Container(),
     );
   }
 }
